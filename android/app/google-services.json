@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "361550750264",
+    "project_id": "hansika-b8770",
+    "storage_bucket": "hansika-b8770.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361550750264:android:720045b92e788c1564fccd",
+        "android_client_info": {
+          "package_name": "com.example.chat_with_weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361550750264-r6dpalfe56k4veo1uiu15l2od1g265r4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3EKemF9jAwvrccZQKfPDD-zP7NzHvQlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361550750264-r6dpalfe56k4veo1uiu15l2od1g265r4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361550750264:android:fb78afa229f7bf9764fccd",
+        "android_client_info": {
+          "package_name": "com.example.flash_hansika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361550750264-r6dpalfe56k4veo1uiu15l2od1g265r4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3EKemF9jAwvrccZQKfPDD-zP7NzHvQlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361550750264-r6dpalfe56k4veo1uiu15l2od1g265r4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
