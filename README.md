@@ -1,6 +1,6 @@
 # flash_hansika
 
-A new Flutter project.
+A combined application for Weather Forecast & Chatting
 
 ## Getting Started
 
