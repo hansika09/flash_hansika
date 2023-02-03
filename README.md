@@ -5,14 +5,14 @@ A combined application for Weather Forecast & Chatting
 
 ## 📸 Screenshots
 
-![Screenshot (97)](https://user-images.githubusercontent.com/56352064/216564488-abd8f7e3-20e0-4a38-bb43-c47d613f483b.png)
+![Screenshot (97)](https://user-images.githubusercontent.com/56352064/216566700-2828b2a9-0a6e-4ef0-8fba-875b62ec4ea9.png)
 
-![Screenshot (98)](https://user-images.githubusercontent.com/56352064/216564535-b73c636e-9e08-4e47-bbde-dbe30df3e7cb.png)
+![Screenshot (99)](https://user-images.githubusercontent.com/56352064/216566721-d762b9bc-bad0-4433-818e-1681b4f0a295.png)
 
-![Screenshot (100)](https://user-images.githubusercontent.com/56352064/216564553-36a71aa3-d91d-4892-9e7b-ba431180a092.png)
+![Screenshot (100)](https://user-images.githubusercontent.com/56352064/216566732-5bb85b7c-ce05-403f-b62e-e6b04a8878ba.png)
 
-![Screenshot (101)](https://user-images.githubusercontent.com/56352064/216564591-fee6f66b-7c0e-42dc-b3dd-042884652689.png)
+![Screenshot (101)](https://user-images.githubusercontent.com/56352064/216566752-3fee49eb-43e7-47ad-ba0b-657fbe18cc75.png)
 
-![Screenshot (102)](https://user-images.githubusercontent.com/56352064/216564613-1059d874-4793-49e5-a54f-b72334866999.png)
+![Screenshot (102)](https://user-images.githubusercontent.com/56352064/216566677-ddc5153d-da84-46b8-9dcc-46c8caf16541.png)
 
-![Screenshot (103)](https://user-images.githubusercontent.com/56352064/216564634-a7677e77-4473-4f73-95c1-a70a9027bfa4.png)
+![Screenshot (103)](https://user-images.githubusercontent.com/56352064/216566636-ec33e05a-60db-41a9-85da-5f4f715d22eb.png)
