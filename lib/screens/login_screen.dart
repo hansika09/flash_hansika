@@ -21,6 +21,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: null,
+        backgroundColor: Colors.transparent,
+      ),
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -67,11 +71,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               RoundedButton(
                 title: 'Log In',
-                colour: Colors.lightBlueAccent,
+                colour: Colors.purpleAccent.shade200,
                 onPressed: () async {
-                  setState(() {
-                    showSpinner = true;
-                  });
                   try {
                     final user = await _auth.signInWithEmailAndPassword(
                         email: email, password: password);

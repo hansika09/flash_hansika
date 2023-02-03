@@ -2,6 +2,7 @@ import 'package:flash_hansika/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import '../components/rounded_button.dart';
 import 'login_screen.dart';
+import 'package:flash_hansika/clima/climaMain.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -54,7 +55,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   ),
                 ),
                 TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
+                  text: ['  Flash Chat'],
                   textStyle: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
@@ -63,22 +64,67 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               ],
             ),
             SizedBox(
-              height: 48.0,
+              height: 50.0,
             ),
             RoundedButton(
               title: 'Log In',
-              colour: Colors.lightBlueAccent,
+              colour: Colors.purpleAccent.shade200,
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
             ),
             RoundedButton(
               title: 'Register',
-              colour: Colors.blueAccent,
+              colour: Colors.purpleAccent.shade200,
               onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
               },
             ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Center(
+                  child: Text('OR',
+                  style: TextStyle(
+                    fontSize: 20,),
+                  ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            // Row(
+            //   children: [
+                // TypewriterAnimatedTextKit(
+                //   text: ['Clima   '],
+                //   textStyle: TextStyle(
+                //     fontSize: 45.0,
+                //     fontWeight: FontWeight.w900,
+                //   ),
+                // ),
+                Hero(
+                  tag: 'logo',
+                  child: Container(
+                    child: Image.asset('images/logo1.gif'),
+                    height: 120.0,
+                  ),
+                ),
+            //   ],
+            // ),
+            SizedBox(
+              height: 30.0,
+            ),
+            RoundedButton(
+              title: 'Check weather before making plans',
+                colour: Colors.purpleAccent.shade200,
+
+                onPressed: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => climaMain()));
+                }
+                )
+
           ],
         ),
       ),

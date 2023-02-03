@@ -1,3 +1,5 @@
+import 'package:flash_hansika/clima/climaMain.dart';
+import 'package:flash_hansika/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -43,14 +45,27 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: null,
         actions: <Widget>[
           IconButton(
+              icon: Icon(Icons.cloud),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => climaMain()));
+              }),
+          IconButton(
               icon: Icon(Icons.close),
               onPressed: () {
-                // _auth.signOut();
+                _auth.signOut();
                 Navigator.pop(context);
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => WelcomeScreen()));
+                // Navigator.pop(context);
               }),
         ],
         title: Text('⚡️Chat'),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.purpleAccent.shade200,
       ),
       body: SafeArea(
         child: Column(
@@ -75,7 +90,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   TextButton(
                     onPressed: () {
                       messageTextController.clear();
-                      _firestore.collection('messages').add({
+                      _firestore.collection('Messages').add({
                         'text': messageText,
                         'sender': loggedInUser.email,
                       });
@@ -104,27 +119,27 @@ class MessagesStream extends StatelessWidget {
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(
-              backgroundColor: Colors.lightBlueAccent,
+              backgroundColor: Colors.purpleAccent.shade400,
             ),
           );
         }
-        // final messages = snapshot.data.docs;
-        // orderBy('timestamp').snapshots();
-        List<MessageBubble> messageBubbles = [];
-        // for (var message in messages) {
-        //   final messageText = message.data['text'];
-        //   final messageSender = message.data['sender'];
-        //
-        //   final currentUser = loggedInUser.email;
-        //
-        //   final messageBubble = MessageBubble(
-        //     sender: messageSender,
-        //     text: messageText,
-        //     isMe: currentUser == messageSender,
-        //   );
-        //
-        //   messageBubbles.add(messageBubble);
-        // }
+        final messages = snapshot.data.docs;
+
+        final List<Text> messageBubbles = [];
+        for (var message in messages) {
+          final messageText = message.data();
+          final messageSender = message.data();
+          
+          final messageBubble= Text('$messageText from $messageSender');
+          // final currentUser = loggedInUser.email;
+          // final messageBubble = MessageBubble(
+          //   sender: messageSender,
+          //   text: messageText,
+          //   isMe: currentUser == messageSender,
+          // );
+
+          messageBubbles.add(messageBubble);
+        }
         return Expanded(
           child: ListView(
             reverse: true,
@@ -171,7 +186,7 @@ class MessageBubble extends StatelessWidget {
               topRight: Radius.circular(30.0),
             ),
             elevation: 5.0,
-            color: isMe ? Colors.lightBlueAccent : Colors.white,
+            color: isMe ? Colors.purpleAccent.shade200 : Colors.white,
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Text(
